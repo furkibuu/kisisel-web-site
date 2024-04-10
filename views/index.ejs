@@ -1,0 +1,211 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurkiBu - Anasayfa</title>
+    <meta name="description" content="Furkibu website- Kişisel Web Site" >
+    <meta name="keywords" content="furkibu.me">
+    <meta name="author" content="FurkiBu">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <button
+    type="button"
+    class="btn btn-info btn-floating btn-lg scroll-element js-scroll fade-in-bottom"
+    id="btn-back-to-top"
+    >
+<i class="fas fa-arrow-up"></i>
+</button>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://www.icegif.com/wp-content/uploads/2023/03/icegif-46.gif" alt="Logo" class="logo-img">
+            <span class="logo-text" style="color: aliceblue;">FURKİBU</span>
+        </div>
+     
+
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#ana" class="nav-link">Anasayfa</a></li>
+            <li class="nav-item"><a href="#hakkimda" class="nav-link">Hakkımda</a></li>
+            <li class="nav-item"><a href="#proje" class="nav-link">Projeler</a></li>
+            <li class="nav-item"><a href="/iletisim" class="nav-link">İletişim</a></li>
+          
+        </ul>
+    </nav>
+    <main>
+
+
+        <section class="hero" id="ana">
+            <div class="container">
+                <div class="he-image">
+                    <img src="https://img.wattpad.com/58db937c4a73d834ebd429e6e5c574fedb0e7322/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f7a316755516275434572775862673d3d2d313235393031343435382e313730626333373231623761643639623238383036383434303530332e676966" width="200" height="200" alt="Profil Resmi" class="profile-picture">
+                </div>
+                 <h1>Merhaba!</h1>
+                <p>Benim kişisel web siteme hoş geldiniz. Burada benim hakkımda, projelerim ve iletişim bilgilerim hakkında daha fazla bilgi bulabilirsiniz.</p>
+            </div>
+        </section>
+        <br>
+
+        <section class="about" id="hakkimda">
+            <div class="container">
+                <h2>Hakkımda</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Ben Furkan, 4 Yıldır yazılım alanında projeler üretmekteyim. Tekirdağlıyım ve 18 yaşındayım.</p>
+                        <button class="btn" id="open-modal">CV İncele</button>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://wallpapers-clan.com/wp-content/uploads/2022/12/hunter-%C3%97-hunter-killua-gif-pfp-1.gif" width="200" height="200" alt="Hakkımda Resmi">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="github-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="github-stats-container">
+    
+                    <div class="loading-progress">
+                        <p>İstatistikler Yükleniyor...</p>
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                <div class="github-stats">
+                   
+                    <h3>Github İstatistiklerim</h3>
+                    <table>
+                        <tr>
+                            <td>Takipçi Sayısı:</td>
+                            <td id="followers">-</td>
+                        </tr>
+                        <tr>
+                            <td>Takip Edilen Sayısı:</td>
+                            <td id="following">-</td>
+                        </tr>
+                        <tr>
+                            <td>Toplam Repo Sayısı:</td>
+                            <td id="repos">-</td>
+                        </tr>
+
+                    </table>
+
+                    <div class="github-languages">
+                        
+                        <h3>En Çok Kullandığım Diller</h3>
+                        <table id="languages-table">
+                            <thead>
+                                <tr>
+                                    <th>Dil</th>
+                                    <th>Yüzde</th>
+                                </tr>
+                            </thead>
+                            <tbody id="languages-list">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <section class="project-stats">
+            <div class="container">
+                <h2>Proje Durumlarım</h2>
+                <div class="project-stats-info">
+                    <div class="stat">
+                        <p class="stat-label">Aktif Projelerim</p>
+                        <p class="stat-value" id="active-projects">5</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-label">Toplam Projelerim</p>
+                        <p class="stat-value" id="total-projects">10</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+
+
+
+<br>
+        <section class="projects" id="proje">
+            <div class="container">
+                <h2>Projelerim</h2>
+                <div class="project-list">
+                    <div class="project">
+                        <img src="https://www.demircode.com/ckfinder/userfiles/images/e-ticaret-sitesi.jpg" width="150" height="150" alt="Proje 1">
+                        <h3>E-Ticaret Sitesi</h3>
+                        <p>Ürünlerinizi satabileceğiniz bir sitedir tamamen ücretsiz bir şekilde sizlere sunuyorum.</p>
+                        <a href="https://github.com/fu-w/e-ticaret" class="btn">Projeye Git</a>
+                    </div>
+                    <div class="project">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy2Cu8JU7kyAP-o53sw_OhKAJjW6aAENAGlTejB75yFg&s" width="150" height="150 " alt="Proje 2">
+                        <h3>Discord Ticket Botu</h3>
+                        <p>Discord sunucunuzda kullanabileceğiniz bir basit ticket bot altyapısıdır discord.js ile kodlnamıştır ve v14'tür.</p>
+                        
+                        <a href="https://github.com/fu-w/ticket-bot" class="btn">Projeye Git</a>
+                    </div>
+                 
+                    
+                </div>
+            </div>
+        </section>
+
+   
+    
+    
+    </main>
+
+    <footer class="footer">
+        
+        <p>&copy; Furkibu | Bütün hakları gizlidir!</p>
+        <div class="social-icons">
+            <a href="" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/furkangrns59" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/furkan-undefined-b298892a9/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://discord.gg/Jufkdt4zs4" class="social-icon"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
+  
+  
+    <script id="Protection">
+     
+    
+        document.onkeydown = function(e) {
+    
+           
+            if (e.keyCode == 123) {
+                return false;
+            }
+    
+           
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                return false;
+            }
+    
+            
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                return false;
+            }
+    
+          
+            if (e.ctrlKey && e.keyCode == 83) {
+                return false;
+            }
+    
+            
+            if (e.ctrlKey && e.keyCode == 85) {
+                return false;
+            }
+        }
+    </script>
+<script src="/js/style.js" ></script>
+</body>
+</html>
